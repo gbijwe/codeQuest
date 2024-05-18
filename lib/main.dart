@@ -7,14 +7,12 @@ import 'package:supa/splash_page.dart';
 Future<void> main() async {
   await Supabase.initialize(
     url: 'https://gaiipxkakijrqyxinwxo.supabase.co',
-    anonKey:
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdhaWlweGtha2lqcnF5eGlud3hvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTE5NDgwNjcsImV4cCI6MjAyNzUyNDA2N30.v9fz-jxTz617NjFckCbtDI9scLIy6oo6VAdAQracK1A',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdhaWlweGtha2lqcnF5eGlud3hvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTE5NDgwNjcsImV4cCI6MjAyNzUyNDA2N30.v9fz-jxTz617NjFckCbtDI9scLIy6oo6VAdAQracK1A',
   );
   runApp(MyApp());
 }
 
 final supabase = Supabase.instance.client;
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -39,7 +37,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/': (_) => const SplashPage(),
         '/login': (_) => const LoginPage(),
-        '/account': (_) => MyHomePage(),
+        '/account': (_) =>  MyHomePage(),
       },
     );
   }
